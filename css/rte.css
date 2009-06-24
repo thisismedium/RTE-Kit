@@ -1,0 +1,23 @@
+.ui-rtekit { border: 1px solid black; padding: 9px; }
+
+    .ui-rtekit-toolbar { border-bottom: 1px solid black; display: block; margin: 0; padding: 0; width: 100%; height: 25px; }
+
+    	.ui-rtekit-tools { display: block; margin: 0; padding: 0; }
+
+    	.ui-rtekit-tool, .ui-rtekit-tool-sep { display: block; list-style-type: none; float: left; margin: 0 0.5em 0 0; padding: 0; height: 16px; }
+
+	    .ui-rtekit-tool select { font-size: 0.8em; }
+
+    .ui-rtekit .ui-widget-content { clear: left; width: 100%; height: 10em; padding-top: 9px; position: relative; }
+
+    	.ui-rtekit textarea, .ui-rtekit iframe { border: none; background-color: transparent; display: block; width: 100%; margin: 0; padding: 0; }
+
+	/* Use "height: 0px" for Opera; "display: none" or "visibility:
+	   hidden" cause problems with toggleFrame().  The !important
+	   is necessary because javascript sets the height to match
+	   the height of the iframe (IE fails to render height: 100%
+	   correctly for a textarea in standards mode). */	
+	.ui-rtekit-frame textarea { height: 0px !important; }
+
+	.ui-rtekit-input iframe { display: none; }
+	

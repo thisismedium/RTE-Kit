@@ -1,0 +1,11 @@
+@import url('reset-fonts-grids.css');
+@import url('base.css');
+@import url('../../css/rte.css');
+
+code { display: block; white-space: pre; border: 1px solid black; background-color: #eee; margin: 1em 0; padding: 0 1em; *padding-top: 1em; }
+
+#ft { text-align: center; }
+
+    #ft a.prev { display: block; float: left; }
+    
+    #ft a.next { display: block; float: right; }    

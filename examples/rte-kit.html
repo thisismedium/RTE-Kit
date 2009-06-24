@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rteKit Examples: Just rteKit</title>
+    <link rel="stylesheet" type="text/css" href="css/example.css" />
+  </head>
+  <body id="doc">
+
+    <div id="hd">
+      <h1>Example 1: Just rteKit</h1>
+    </div>
+    <div id="bd">
+      <p>This example demonstrates the basic behavior of rteKit:
+        a toolbar with a textarea/iframe pair.</p>
+      <form>
+        <textarea id="example-1"></textarea>
+      </form>
+
+      <h3>Markup</h3>
+      <code>
+&lt;textarea id="example-1"&gt;&lt;/textarea&gt;
+      </code>
+      <h3>Javascript</h3>
+      <code>
+$('#example-1').rteKit({
+    toolbar: 'bold italic underline | insert-paragraph remove-format'
+});
+      </code>
+    </div>
+
+    <div id="ft">
+      <a class="next" href="rte-kit-2.html">next &raquo;</a>
+      <a class="up" href="index.html">up</a>
+    </div>
+
+    <script type="text/javascript" src="../depends/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="../depends/ui.core.js"></script>
+    <script type="text/javascript" src="../source/text.js"></script>
+    <script type="text/javascript" src="../source/design-mode.js"></script>
+    <script type="text/javascript" src="../source/rte-kit.js"></script>
+    <script type="text/javascript" src="js/rte-kit.js"></script>
+  </body>
+</html>

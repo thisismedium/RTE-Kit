@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rteKit Examples: Advanced Controls</title>
+    <link rel="stylesheet" type="text/css" href="css/example.css" />
+  </head>
+  <body id="doc">
+
+    <div id="hd">
+      <h1>Example 3: Advanced Controls</h1>
+    </div>
+    <div id="bd">
+      <p>Some designMode commands require a parameter from the user.
+      This example uses select elements to choose the font face and
+      size.  The javascript <var>prompt()</var> procedure is used to
+      create links and images.  A custom command is also implemented
+      to toggle the editor between source and rich-text modes.</p>
+
+      <form>
+        <div class="ui-rtekit">
+          <div class="ui-rtekit-toolbar"></div>
+          <div class="ui-widget-content">
+            <textarea id="example-3">Hello, world.</textarea>
+          </div>
+        </div>
+      </form>
+
+      <h3>Markup</h3>
+      <code>
+&lt;div class="ui-rtekit"&gt;
+  &lt;div class="ui-rtekit-toolbar"&gt;&lt;/div&gt;
+  &lt;div class="ui-widget-content"&gt;
+    &lt;textarea id="example-3"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code>
+
+      <h3>Javascript</h3>
+
+      <p>The <var>menu()</var> and <var>with_prompt()</var>
+      procedures are defined
+      in <a href="./js/rte-kit.js">./js/rte-kit.js</a>.</p>
+
+      <code>
+function example3() {
+   $('#example-3').rteKit({
+       toolbar: (
+           'font-name font-size'
+           + ' | bold italic underline insert-paragraph'
+           + ' | create-link insert-image'
+           + ' | remove-formatting html'
+       ),
+
+       tools: {
+           'create-link': with_prompt('Enter Link:'),
+
+           'insert-image': with_prompt('Enter Image URL:'),
+
+           'font-size': menu('Size', [1, 2, 3, 4, 5, 6, 7]),
+
+           'font-name': menu('Font', ['Arial', 'Times', 'Verdana', 'Helvetica', 'Sans']),
+
+           'html': $.ui.rteKit.button(function(event, rte, cmd) {
+               rte.toggleFrame();
+           })
+       }
+   });
+}
+      </code>
+    </div>
+
+    <div id="ft">
+      <a class="prev" href="rte-kit-2.html">&laquo; previous</a>
+      <a class="up" href="index.html">up</a>
+    </div>
+
+    <script type="text/javascript" src="../depends/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="../depends/ui.core.js"></script>
+    <script type="text/javascript" src="../source/text.js"></script>
+    <script type="text/javascript" src="../source/design-mode.js"></script>
+    <script type="text/javascript" src="../source/rte-kit.js"></script>
+    <script type="text/javascript" src="js/rte-kit.js"></script>
+  </body>
+</html>
